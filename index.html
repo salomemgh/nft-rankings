@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFT Rankings </title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!--navbar, burgermenu-->
+    <nav class="navbar navbar-expand-lg navbar-dark p-4">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="https://nft-home-page-kappa.vercel.app/">
+                <img src="./Storefront.png">
+                NFT Marketplace
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#nav1">
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3 12C3 11.5858 3.33579 11.25 3.75 11.25H20.25C20.6642 11.25 21 11.5858 21 12C21 12.4142 20.6642 12.75 20.25 12.75H3.75C3.33579 12.75 3 12.4142 3 12Z" fill="white"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3 6C3 5.58579 3.33579 5.25 3.75 5.25H15C15.4142 5.25 15.75 5.58579 15.75 6C15.75 6.41421 15.4142 6.75 15 6.75H3.75C3.33579 6.75 3 6.41421 3 6Z" fill="white"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3 18C3 17.5858 3.33579 17.25 3.75 17.25H15C15.4142 17.25 15.75 17.5858 15.75 18C15.75 18.4142 15.4142 18.75 15 18.75H3.75C3.33579 18.75 3 18.4142 3 18Z" fill="white"/>
+                      </svg>
+                </span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="nav1">
+                <ul class="navbar-nav ms-auto gap-4 align-items-center">
+                    <li class="nav-item me-auto">
+                        <a href="#" class="nav-link marketplace text-white">
+                            Marketplace
+                        </a>
+                    </li>
+                    <li class="nav-item me-auto">
+                        <a href="#" class="nav-link text-white">
+                            Rankings
+                        </a>
+                    </li>
+                    <li class="nav-item me-auto">
+                        <a href="#" class="nav-link text-white">
+                            Connect a wallet
+                        </a>
+                    </li>
+    
+                    <a href="https://nft-sign-up-page.vercel.app/" class="me-auto">
+                        <button type="button" class="button_navigation gap-2">
+                            <img src="./User.png" style="background: none;">
+                            Sign Up
+                        </button>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Top creators -->
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12 col-10">
+                <h2 class="h2_topcreators">Top Creators</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-11">
+                <p class="p_check">Check out top ranking NFT artists on the NFT Marketplace.</p>
+            </div>
+        </div>
+        <!--Days For DESKTOP-->
+        <div class="row mt-5">
+            <div class="col-md-3 d-md-block d-none">
+                <h5 class="h5_today text-center">Today</h5>
+                <div class="border-bottom border-2 border-secondary-subtle"></div>
+            </div>
+            <div class="col-md-3 d-md-block d-none">
+                <h5 class="h5_week text-center">This Week</h5>
+            </div>
+            <div class="col-md-3 d-md-block d-none">
+                <h5 class="h5_month text-center">This Month</h5>
+            </div>
+            <div class="col-md-3 d-md-block d-none">
+                <h5 class="h5_alltime text-center">All Time</h5>
+            </div>
+        </div>
+        <!--Days For MOBILE-->
+        <div class="row mt-5 justify-content-center gap-2">
+            <div class="col-2 d-md-none d-block">
+                <h5 class="h5_today text-center">1d</h5>
+                <div class="border-bottom border-2 border-secondary-subtle"></div>
+            </div>
+            <div class="col-2 d-md-none d-block">
+                <h5 class="h5_week text-center">7d</h5>
+            </div>
+            <div class="col-2 d-md-none d-block">
+                <h5 class="h5_month text-center">30d</h5>
+            </div>
+            <div class="col-3 d-md-none d-block">
+                <h5 class="h5_alltime text-center">All Time</h5>
+            </div>
+        </div>
+    </div>
+    <!-- Table Headers for DESKTOP -->
+    <div class="container mt-4 d-md-block d-none">
+        <div class="row border_row align-items-center">
+            <div class="col-md-6">
+                <span class="text_header">
+                    #
+                    <span class="text_header ms-4">Artist</span>
+                </span>
+            </div>
+            <div class="col-md-2">
+                <span class="text_header">Change</span>
+            </div>
+            <div class="col-md-2">
+                <span class="text_header">NFTs Sold</span>
+            </div>
+            <div class="col-md-2">
+                <span class="text_header">Volume</span>
+            </div>
+        </div>
+    </div>
+        <!-- Table Items For DESKTOP -->
+        <div class="container d-md-block d-none">
+            <div class="row mt-4 body_style align-items-center">
+                <div class="col-md-6">
+                    <span class="badge badge_style pt-2">1</span>
+                    <img src="./Jaydon.png" class="ms-3">
+                    <span class="span_name ms-4">Jaydon Ekstrom Bothman</span>
+                </div>
+                <div class="col-md-2">
+                    <span class="span_Change">+1.41%</span>
+                </div>
+                <div class="col-md-2">
+                    <span class="span_nfts">602</span>
+                </div>
+                <div class="col-md-2">
+                    <span class="span_volume">12.4 ETH</span>
+                </div>
+            </div>
+            <div class="row mt-4 body_style align-items-center">
+                <div class="col-md-6">
+                    <span class="badge badge_style pt-2">2</span>
+                    <img src="./Ruben Carder.png" class="ms-3">
+                    <span class="span_name ms-4">Ruben Carder</span>
+                </div>
+                <div class="col-md-2">
+                    <span class="span_Change">+1.41%</span>
+                </div>
+                <div class="col-md-2">
+                    <span class="span_nfts">602</span>
+                </div>
+                <div class="col-md-2">
+                    <span class="span_volume">12.4 ETH</span>
+                </div>
+            </div>
+            <div class="row mt-4 body_style align-items-center">
+                <div class="col-md-6">
+                    <span class="badge badge_style pt-2">3</span>
+                    <img src="./Alfredo Septimus.png" class="ms-3">
+                    <span class="span_name ms-4">Alfredo Septimus</span>
+                </div>
+                <div class="col-md-2">
+                    <span class="span_Change">+1.41%</span>
+                </div>
+                <div class="col-md-2">
+                    <span class="span_nfts">602</span>
+                </div>
+                <div class="col-md-2">
+                    <span class="span_volume">12.4 ETH</span>
+                </div>
+            </div>
+            <div class="row mt-4 body_style align-items-center">
+                <div class="col-md-6">
+                    <span class="badge badge_style pt-2">4</span>
+                    <img src="./Davis Franci.png" class="ms-3">
+                    <span class="span_name ms-4">Davis Franci</span>
+                </div>
+                <div class="col-md-2">
+                    <span class="span_Change">+1.41%</span>
+                </div>
+                <div class="col-md-2">
+                    <span class="span_nfts">602</span>
+                </div>
+                <div class="col-md-2">
+                    <span class="span_volume">12.4 ETH</span>
+                </div>
+            </div>
+            <div class="row mt-4 body_style align-items-center">
+                <div class="col-md-6">
+                    <span class="badge badge_style pt-2">5</span>
+                    <img src="./Livia Rosser.png" class="ms-3">
+                    <span class="span_name ms-4">Livia Rosser</span>
+                </div>
+                <div class="col-md-2">
+                    <span class="span_Change">+1.41%</span>
+                </div>
+                <div class="col-md-2">
+                    <span class="span_nfts">602</span>
+                </div>
+                <div class="col-md-2">
+                    <span class="span_volume">12.4 ETH</span>
+                </div>
+            </div>
+            <div class="row mt-4 body_style align-items-center">
+                <div class="col-md-6">
+                    <span class="badge badge_style pt-2">6</span>
+                    <img src="./Kianna Donin.png" class="ms-3">
+                    <span class="span_name ms-4">Kianna Donin</span>
+                </div>
+                <div class="col-md-2">
+                    <span class="span_Change">+1.41%</span>
+                </div>
+                <div class="col-md-2">
+                    <span class="span_nfts">602</span>
+                </div>
+                <div class="col-md-2">
+                    <span class="span_volume">12.4 ETH</span>
+                </div>
+            </div>
+            <div class="row mt-4 body_style align-items-center">
+                <div class="col-md-6">
+                    <span class="badge badge_style pt-2">7</span>
+                    <img src="./Phillip Lipshutz.png" class="ms-3">
+                    <span class="span_name ms-4">Phillip Lipshutz</span>
+                </div>
+                <div class="col-md-2">
+                    <span class="span_Change">+1.41%</span>
+                </div>
+                <div class="col-md-2">
+                    <span class="span_nfts">602</span>
+                </div>
+                <div class="col-md-2">
+                    <span class="span_volume">12.4 ETH</span>
+                </div>
+            </div>
+            <div class="row mt-4 body_style align-items-center">
+                <div class="col-md-6">
+                    <span class="badge badge_style pt-2">8</span>
+                    <img src="./Maria Rosser.png" class="ms-3">
+                    <span class="span_name ms-4">Maria Rosser</span>
+                </div>
+                <div class="col-md-2">
+                    <span class="span_Change">+1.41%</span>
+                </div>
+                <div class="col-md-2">
+                    <span class="span_nfts">602</span>
+                </div>
+                <div class="col-md-2">
+                    <span class="span_volume">12.4 ETH</span>
+                </div>
+            </div>
+            <div class="row mt-4 body_style align-items-center">
+                <div class="col-md-6">
+                    <span class="badge badge_style pt-2">9</span>
+                    <img src="./Kianna Stanton.png" class="ms-3">
+                    <span class="span_name ms-4">Kianna Stanton</span>
+                </div>
+                <div class="col-md-2">
+                    <span class="span_Change">+1.41%</span>
+                </div>
+                <div class="col-md-2">
+                    <span class="span_nfts">602</span>
+                </div>
+                <div class="col-md-2">
+                    <span class="span_volume">12.4 ETH</span>
+                </div>
+            </div>
+            <div class="row mt-4 body_style align-items-center">
+                <div class="col-md-6">
+                    <span class="badge badge_style pt-2">10</span>
+                    <img src="./Angel Lubin.png" class="ms-3">
+                    <span class="span_name ms-4">Angel Lubin</span>
+                </div>
+                <div class="col-md-2">
+                    <span class="span_Change">+1.41%</span>
+                </div>
+                <div class="col-md-2">
+                    <span class="span_nfts">602</span>
+                </div>
+                <div class="col-md-2">
+                    <span class="span_volume">12.4 ETH</span>
+                </div>
+            </div>
+            <div class="row mt-4 body_style align-items-center">
+                <div class="col-md-6">
+                    <span class="badge badge_style pt-2">11</span>
+                    <img src="./Allison Torff.png" class="ms-3">
+                    <span class="span_name ms-4">Allison Torff</span>
+                </div>
+                <div class="col-md-2">
+                    <span class="span_Change">+1.41%</span>
+                </div>
+                <div class="col-md-2">
+                    <span class="span_nfts">602</span>
+                </div>
+                <div class="col-md-2">
+                    <span class="span_volume">12.4 ETH</span>
+                </div>
+            </div>
+            <div class="row mt-4 body_style align-items-center">
+                <div class="col-md-6">
+                    <span class="badge badge_style pt-2">12</span>
+                    <img src="./Davis Workman.png" class="ms-3">
+                    <span class="span_name ms-4">Davis Workman</span>
+                </div>
+                <div class="col-md-2">
+                    <span class="span_Change">+1.41%</span>
+                </div>
+                <div class="col-md-2">
+                    <span class="span_nfts">602</span>
+                </div>
+                <div class="col-md-2">
+                    <span class="span_volume">12.4 ETH</span>
+                </div>
+            </div>
+            <div class="row mt-4 body_style align-items-center">
+                <div class="col-md-6">
+                    <span class="badge badge_style pt-2">13</span>
+                    <img src="./Lindsey Lipshutz.png" class="ms-3">
+                    <span class="span_name ms-4">Lindsey Lipshutz</span>
+                </div>
+                <div class="col-md-2">
+                    <span class="span_Change">+1.41%</span>
+                </div>
+                <div class="col-md-2">
+                    <span class="span_nfts">602</span>
+                </div>
+                <div class="col-md-2">
+                    <span class="span_volume">12.4 ETH</span>
+                </div>
+            </div>
+            <div class="row mt-4 body_style align-items-center">
+                <div class="col-md-6">
+                    <span class="badge badge_style pt-2">14</span>
+                    <img src="./Randy Carder.png" class="ms-3">
+                    <span class="span_name ms-4">Randy Carder</span>
+                </div>
+                <div class="col-md-2">
+                    <span class="span_Change">+1.41%</span>
+                </div>
+                <div class="col-md-2">
+                    <span class="span_nfts">602</span>
+                </div>
+                <div class="col-md-2">
+                    <span class="span_volume">12.4 ETH</span>
+                </div>
+            </div>
+            <div class="row mt-4 body_style align-items-center">
+                <div class="col-md-6">
+                    <span class="badge badge_style pt-2">15</span>
+                    <img src="./Lydia Culhane.png" class="ms-3">
+                    <span class="span_name ms-4">Lydia Culhane</span>
+                </div>
+                <div class="col-md-2">
+                    <span class="span_Change">+1.41%</span>
+                </div>
+                <div class="col-md-2">
+                    <span class="span_nfts">602</span>
+                </div>
+                <div class="col-md-2">
+                    <span class="span_volume">12.4 ETH</span>
+                </div>
+            </div>
+            <div class="row mt-4 body_style align-items-center">
+                <div class="col-md-6">
+                    <span class="badge badge_style pt-2">16</span>
+                    <img src="./Rayna Bator.png" class="ms-3">
+                    <span class="span_name ms-4">Rayna Bator</span>
+                </div>
+                <div class="col-md-2">
+                    <span class="span_Change">+1.41%</span>
+                </div>
+                <div class="col-md-2">
+                    <span class="span_nfts">602</span>
+                </div>
+                <div class="col-md-2">
+                    <span class="span_volume">12.4 ETH</span>
+                </div>
+            </div>
+            <div class="row mt-4 body_style align-items-center">
+                <div class="col-md-6">
+                    <span class="badge badge_style pt-2">17</span>
+                    <img src="./Jocelyn Westervelt.png" class="ms-3">
+                    <span class="span_name ms-4">Jocelyn Westervelt</span>
+                </div>
+                <div class="col-md-2">
+                    <span class="span_Change">+1.41%</span>
+                </div>
+                <div class="col-md-2">
+                    <span class="span_nfts">602</span>
+                </div>
+                <div class="col-md-2">
+                    <span class="span_volume">12.4 ETH</span>
+                </div>
+            </div>
+            <div class="row mt-4 body_style align-items-center">
+                <div class="col-md-6">
+                    <span class="badge badge_style pt-2">18</span>
+                    <img src="./Marilyn Torff.png" class="ms-3">
+                    <span class="span_name ms-4">Marilyn Torff</span>
+                </div>
+                <div class="col-md-2">
+                    <span class="span_Change">+1.41%</span>
+                </div>
+                <div class="col-md-2">
+                    <span class="span_nfts">602</span>
+                </div>
+                <div class="col-md-2">
+                    <span class="span_volume">12.4 ETH</span>
+                </div>
+            </div>
+            <div class="row mt-4 body_style align-items-center">
+                <div class="col-md-6">
+                    <span class="badge badge_style pt-2">19</span>
+                    <img src="./Skylar Levin.png" class="ms-3">
+                    <span class="span_name ms-4">Skylar Levin</span>
+                </div>
+                <div class="col-md-2">
+                    <span class="span_Change">+1.41%</span>
+                </div>
+                <div class="col-md-2">
+                    <span class="span_nfts">602</span>
+                </div>
+                <div class="col-md-2">
+                    <span class="span_volume">12.4 ETH</span>
+                </div>
+            </div>
+            <div class="row mt-4 body_style align-items-center">
+                <div class="col-md-6">
+                    <span class="badge badge_style">20</span>
+                    <img src="./Terry Dorwart.png" class="ms-3">
+                    <span class="span_name ms-4">Terry Dorwart</span>
+                </div>
+                <div class="col-md-2">
+                    <span class="span_Change">+1.41%</span>
+                </div>
+                <div class="col-md-2">
+                    <span class="span_nfts">602</span>
+                </div>
+                <div class="col-md-2">
+                    <span class="span_volume">12.4 ETH</span>
+                </div>
+            </div>
+        </div>
+        </div>
+
+    <!-- Table Headers & items for Mobile -->
+    <div class="container mt-5 d-block d-md-none d-flex justify-content-center">
+        <!-- Table Header For MOBILE-->
+        <div class="row border_row align-items-center justify-content-between">
+            <div class="col-6">
+                <span class="text_header">
+                    #
+                    <span class="text_header ps-2">Artist</span>
+                </span>
+            </div>
+            <div class="col-4">
+                <span class="text_header text-center">Volume</span>
+            </div>
+        </div>
+    </div>
+        <!--Table items For MOBILE-->
+    <div class="container d-flex justify-content-center mt-4 d-block d-md-none">
+        <div>
+            <div class="row body_style align-items-center mt-2">
+                <div class="col-8">
+                    <span class="span_number_mob">1</span>
+                    <img src="./Zain Dokidis:mob.png" class="ms-2">
+                    <span class="span_name_mob ps-2">Zain Dokidis</span>
+                </div>
+                <div class="col-4">
+                    <span class="span_volume_mob">12.4 ETH</span>
+                </div>
+            </div>
+            <div class="row body_style align-items-center mt-3">
+                <div class="col-8">
+                    <span class="span_number_mob">2</span>
+                    <img src="./Ruben Vetrovs-Cheyenne Rhiel .png" class="ms-2">
+                    <span class="span_name_mob ps-2">Ruben Vetrovs</span>
+                </div>
+                <div class="col-4">
+                    <span class="span_volume_mob">12.4 ETH</span>
+                </div>
+            </div>
+            <div class="row body_style align-items-center mt-3">
+                <div class="col-8">
+                    <span class="span_number_mob">3</span>
+                    <img src="./Maren Franci-Emerson Carder.png" class="ms-2">
+                    <span class="span_name_mob ps-2">Maren Franci</span>
+                </div>
+                <div class="col-4">
+                    <span class="span_volume_mob">12.4 ETH</span>
+                </div>
+            </div>
+            <div class="row body_style align-items-center mt-3">
+                <div class="col-8">
+                    <span class="span_number_mob">4</span>
+                    <img src="./Maren Franci-Emerson Carder.png" class="ms-2">
+                    <span class="span_name_mob ps-2">Emerson Carder</span>
+                </div>
+                <div class="col-4">
+                    <span class="span_volume_mob">12.4 ETH</span>
+                </div>
+            </div>
+            <div class="row body_style align-items-center mt-3">
+                <div class="col-8">
+                    <span class="span_number_mob">5</span>
+                    <img src="./Zain Botosh-Erin Siphron.png" class="ms-2">
+                    <span class="span_name_mob ps-2">Zain Botosh</span>
+                </div>
+                <div class="col-4">
+                    <span class="span_volume_mob">12.4 ETH</span>
+                </div>
+            </div>
+            <div class="row body_style align-items-center mt-3">
+                <div class="col-8">
+                    <span class="span_number_mob">6</span>
+                    <img src="./Talan Korsgaard.png" class="ms-2">
+                    <span class="span_name_mob ps-2">Talan Korsgaard</span>
+                </div>
+                <div class="col-4">
+                    <span class="span_volume_mob">12.4 ETH</span>
+                </div>
+            </div>
+            <div class="row body_style align-items-center mt-3">
+                <div class="col-8">
+                    <span class="span_number_mob">7</span>
+                    <img src="./Haylie Dias-James Donin-Cristofer Levin.png" class="ms-2">
+                    <span class="span_name_mob ps-2">Haylie Dias</span>
+                </div>
+                <div class="col-4">
+                    <span class="span_volume_mob">12.4 ETH</span>
+                </div>
+            </div>
+            <div class="row body_style align-items-center mt-3">
+                <div class="col-8">
+                    <span class="span_number_mob">8</span>
+                    <img src="./Haylie Dias-James Donin-Cristofer Levin.png" class="ms-2">
+                    <span class="span_name_mob ps-2">James Donin</span>
+                </div>
+                <div class="col-4">
+                    <span class="span_volume_mob">12.4 ETH</span>
+                </div>
+            </div>
+            <div class="row body_style align-items-center mt-3">
+                <div class="col-8">
+                    <span class="span_number_mob">9</span>
+                    <img src="./Zain Botosh-Erin Siphron.png" class="ms-2">
+                    <span class="span_name_mob ps-2">Erin Siphron</span>
+                </div>
+                <div class="col-4">
+                    <span class="span_volume_mob">12.4 ETH</span>
+                </div>
+            </div>
+            <div class="row body_style align-items-center mt-3">
+                <div class="col-8">
+                    <span class="span_number_mob">10</span>
+                    <img src="./Haylie Dias-James Donin-Cristofer Levin.png" class="ms-2">
+                    <span class="span_name_mob ps-2">Cristofer Levin</span>
+                </div>
+                <div class="col-4">
+                    <span class="span_volume_mob">12.4 ETH</span>
+                </div>
+            </div>
+            <div class="row body_style align-items-center mt-3">
+                <div class="col-8">
+                    <span class="span_number_mob">11</span>
+                    <img src="./Alena Schleifer-Omar Stanton.png" class="ms-2">
+                    <span class="span_name_mob ps-2">Alena Schleifer</span>
+                </div>
+                <div class="col-4">
+                    <span class="span_volume_mob">12.4 ETH</span>
+                </div>
+            </div>
+            <div class="row body_style align-items-center mt-3">
+                <div class="col-8">
+                    <span class="span_number_mob">12</span>
+                    <img src="./Dulce Vetrovs.png" class="ms-2">
+                    <span class="span_name_mob ps-2">Dulce Vetrovs</span>
+                </div>
+                <div class="col-4">
+                    <span class="span_volume_mob">12.4 ETH</span>
+                </div>
+            </div>
+            <div class="row body_style align-items-center mt-3">
+                <div class="col-8">
+                    <span class="span_number_mob">13</span>
+                    <img src="./Nolan Siphron-Terry Donin.png" class="ms-2">
+                    <span class="span_name_mob ps-2">Nolan Siphron</span>
+                </div>
+                <div class="col-4">
+                    <span class="span_volume_mob">12.4 ETH</span>
+                </div>
+            </div>
+            <div class="row body_style align-items-center mt-3">
+                <div class="col-8">
+                    <span class="span_number_mob">14</span>
+                    <img src="./Alena Schleifer-Omar Stanton.png" class="ms-2">
+                    <span class="span_name_mob ps-2">Omar Stanton</span>
+                </div>
+                <div class="col-4">
+                    <span class="span_volume_mob">12.4 ETH</span>
+                </div>
+            </div>
+            <div class="row body_style align-items-center mt-3">
+                <div class="col-8">
+                    <span class="span_number_mob">15</span>
+                    <img src="./Omar Lipshutz.png" class="ms-2">
+                    <span class="span_name_mob ps-2">Omar Lipshutz</span>
+                </div>
+                <div class="col-4">
+                    <span class="span_volume_mob">12.4 ETH</span>
+                </div>
+            </div>
+            <div class="row body_style align-items-center mt-3">
+                <div class="col-8">
+                    <span class="span_number_mob">16</span>
+                    <img src="./Nolan Siphron-Terry Donin.png" class="ms-2">
+                    <span class="span_name_mob ps-2">Terry Donin</span>
+                </div>
+                <div class="col-4">
+                    <span class="span_volume_mob">12.4 ETH</span>
+                </div>
+            </div>
+            <div class="row body_style align-items-center mt-3">
+                <div class="col-8">
+                    <span class="span_number_mob">17</span>
+                    <img src="./Erin Botosh.png" class="ms-2">
+                    <span class="span_name_mob ps-2">Erin Botosh</span>
+                </div>
+                <div class="col-4">
+                    <span class="span_volume_mob">12.4 ETH</span>
+                </div>
+            </div>
+            <div class="row body_style align-items-center mt-3">
+                <div class="col-8">
+                    <span class="span_number_mob">18</span>
+                    <img src="./Ruben Vetrovs-Cheyenne Rhiel .png" class="ms-2">
+                    <span class="span_name_mob ps-2">Cheyenne Rhiel </span>
+                </div>
+                <div class="col-4">
+                    <span class="span_volume_mob">12.4 ETH</span>
+                </div>
+            </div>
+            <div class="row body_style align-items-center mt-3">
+                <div class="col-8">
+                    <span class="span_number_mob">19</span>
+                    <img src="./Jaxson Vaccaro-Jordyn Dias.png" class="ms-2">
+                    <span class="span_name_mob ps-2">Jaxson Vaccaro</span>
+                </div>
+                <div class="col-4">
+                    <span class="span_volume_mob">12.4 ETH</span>
+                </div>
+            </div>
+            <div class="row body_style align-items-center mt-3">
+                <div class="col-8">
+                    <span class="span_number_mob">20</span>
+                    <img src="./Jaxson Vaccaro-Jordyn Dias.png" class="ms-2">
+                    <span class="span_name_mob ps-2">Jordyn Dias </span>
+                </div>
+                <div class="col-4">
+                    <span class="span_volume_mob">12.4 ETH</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer section For Desktop -->
+    <div class="container-fluid d-md-block d-none mt-5"
+        style="background: hsla(0, 0%, 23%, 1); height: 400px;">
+        <div class="container">
+            <div class="row row_space justify-content-center">
+
+                <!--1-->
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <img src="./Storefront.png">
+                            <span class="footer_header ps-1">NFT Marketplace</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <p class="footer_text mt-4">
+                                NFT marketplace UI created<br> with Anima for Figma.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <p class="footer_text mt-3">Join our community</p>
+                        </div>
+                    </div>
+                    <div class="row gap-2">
+                        <div class="col-md-1">
+                            <img src="./DiscordLogo.png">
+                        </div>
+                        <div class="col-md-1">
+                            <img src="./YoutubeLogo.png">
+                        </div>
+                        <div class="col-md-1">
+                            <img src="./TwitterLogo.png">
+                        </div>
+                        <div class="col-md-1">
+                            <img src="./InstagramLogo.png">
+                        </div>
+                    </div>
+                </div>
+    
+                <!--2-->
+                <div class="col-md-3">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <h5 class="footer_header mb-4">Explore</h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <a class="footer_text a_text" href="#">Marketplace</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <a class="footer_text a_text" href="#">Rankings</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <a class="footer_text a_text" href="#">Connect a wallet</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--3-->
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h5 class="footer_header mb-4">
+                                Join our weekly digest
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-10">
+                            <p class="footer_text">
+                                Get exclusive promotions & updates<br> straight to your inbox.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-12 position-relative">
+                            <input class="email1 ps-3" type="email" placeholder="Enter your email here">
+                            <button type="button" class="button3_mobile position-absolute end-0">
+                                <img src="./EnvelopeSimple.png">
+                                <a class="button_subscribe ps-1" href="#">Subscribe</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+            <!-- border & copyright-->
+            <hr class="hr_footer mt-5">
+            <div class="row">
+                <div class="col-md-12 ms-3">
+                    <p class="copyR_footer mt-3">
+                        Ⓒ NFT Market. Use this template freely.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer For mobile -->
+    <div class="container-fluid mt-5 d-block d-md-none"
+    style="background: hsla(0, 0%, 23%, 1); height: 100%;">
+        <div class="container">
+            <div class="row row_space justify-content-center">
+
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <img src="./Storefront.png">
+                            <span class="footer_header ps-1">NFT Marketplace</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <p class="footer_text mt-4">
+                                NFT marketplace UI created with Anima<br>for Figma.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <p class="footer_text mt-1">Join our community</p>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-10 d-flex gap-3">
+                            <img src="./DiscordLogo.png">
+                            <img src="./YoutubeLogo.png">
+                            <img src="./TwitterLogo.png">
+                            <img src="./InstagramLogo.png">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-3">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <h5 class="footer_header mb-4 mt-4">Explore</h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <a class="footer_text a_text" href="#">Marketplace</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <a class="footer_text a_text" href="#">Rankings</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <a class="footer_text a_text" href="#">Connect a wallet</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h5 class="footer_header mt-4 mb-4">
+                                Join our weekly digest
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-10">
+                            <p class="footer_text">
+                                Get exclusive promotions & updates<br> straight to your inbox.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                        <div class="col-12 mt-3">
+                            <input class="input_mail ps-3" type="email" placeholder="Enter Your Email Address">
+                        </div>
+                    </div>
+                    <div class="row pb-3">
+                        <div class="col-12 mt-3">
+                            <button type="button" class="button_subscribe_mobile">
+                                <img src="./EnvelopeSimple.png">
+                                <a class="button_subscribe ps-1" href="#">Subscribe</a>
+                            </button>
+                        </div>
+                    </div>
+
+            </div>
+            <hr class="hr_footer">
+            <div class="row">
+                <div class="col-12 ms-1">
+                    <p class="copyR_footer pt-3">
+                        Ⓒ NFT Market. Use this template freely.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
